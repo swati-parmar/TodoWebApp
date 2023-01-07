@@ -1,17 +1,33 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM  from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+ReactDOM.render (<App/>,
+    document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// spread operator
+// 1 st way
+// const fullname = ['swati', 'parmar'];
+// const biodata = [1,...fullname, 26, 'male'];
+
+// console.log(fullname);
+// console.log(biodata);
+
+// 2nd Way
+// var shooterGames = ['call of Duty', 'Far Cry', 'Resident Evil','call of Duty', 'Far Cry', 'Resident Evil' ];
+// var racingGames = ['Need for Speed', 'Gran Turismo', 'Burnout'];
+
+// var games = [...shooterGames, ...racingGames];
+
+// console.log(games);
+
+// 3rd way
+
+// var shooterGames = ['call of Duty', 'Far Cry', 'Resident Evil'];
+// var [first, ...remaining] = shooterGames;
+// console.log(first);
+// console.log(remaining);
+
+
