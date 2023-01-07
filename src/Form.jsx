@@ -8,6 +8,7 @@ const Form = () => {
         email: "",
         phone: "",
       });
+      
     
       const inputEvent = (event) => {
         console.log(event.target.name)

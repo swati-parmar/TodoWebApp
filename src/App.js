@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // import DigitalTime from "./DigitalTime";
 // // import Heading from './Heading';
 // // import Paragraph from './Paragraph'
@@ -12,7 +12,7 @@ import React, {useState} from "react";
 import './index.css';
 // import OnClickChange from "./OnClickChange";
 // import Form from './Form';
-import ToDoList from "./ToDoList";
+import TodoApp from "./TodoApp";
 
 
 
@@ -30,84 +30,38 @@ import ToDoList from "./ToDoList";
 
 const App = () => {
 
-  const [inputList, setInputList] = useState("");
-  const [Items, setItems] = useState([]);
-
-  const itemEvent = (event) => {
-    setInputList(event.target.value);
-  }
-
-  const listOfItems = () => {
-    setItems((oldItems) => {
-      return [...oldItems, inputList];
-    });
-    setInputList('');
-  };
-
-  const deleteItems = (id) => {
-    console.log("deleted");
-
-    setItems((oldItems) => {
-      return oldItems.filter((arrayElem, index) => {
-        return index !== id;
-      });
-    });
-  };
-
-  return(
-    <>
-    <div className="main_div">
-      <div className="center_div">
-        <br />
-        <h1> ToDo List</h1>
-        <br />
-        <input type="text" placeholder="Add a Items" 
-          value={inputList}
-        onChange={itemEvent}/>
-        <button onClick={listOfItems}> + </button>
-
-        <ol>
-          {/* <li>{inputList}</li> */}
-         { Items.map((itemval,index) => {
-          return <ToDoList 
-          key={index}
-          id={index} 
-          text={itemval}
-          onSelect = {deleteItems}
-          />
-          })}
-        </ol>
-      </div>
-    </div>
+  return (
+    <div>
+      <TodoApp/>
       {/* <Form /> */}
-    </>
+    </div>
   );
-  
-// let newTime = new Date().toLocaleTimeString();
-// const [ctime, setCtime] = useState(newTime);
 
-// const UpdateTime = () => {
-//   let newCTime = new Date().toLocaleTimeString();
-//   setCtime(newCTime);
+  // let newTime = new Date().toLocaleTimeString();
+  // const [ctime, setCtime] = useState(newTime);
+
+  // const UpdateTime = () => {
+  //   let newCTime = new Date().toLocaleTimeString();
+  //   setCtime(newCTime);
 }
 
-    // return( 
-    // <>
-    //   <h1>{ctime}</h1>
-    //   <button onClick={UpdateTime}>Get Time </button>
+// return( 
+// <>
+//   <h1>{ctime}</h1>
+//   <button onClick={UpdateTime}>Get Time </button>
 
-    {/* <h1> 🎰 Welcome tp <span> Slot Machine game </span> 🎰 </h1> */}
+{/* <h1> 🎰 Welcome tp <span> Slot Machine game </span> 🎰 </h1> */ }
 {/* <div>
     <SlotM x='😄' y='😄' z='😄'/>
     <SlotM x='😃' y='😆' z='🥰'/>
     <SlotM x='🍎' y='🍌' z='🥭'/>
     <SlotM x='👪' y='👪' z='👪'/>
 </div> */}
-      {/* <h1>List of top 5 Netflix Series in 2020</h1> */}
-    {/* <FavS /> */}
+{/* <h1>List of top 5 Netflix Series in 2020</h1> */ }
+{/* <FavS /> */ }
 
-    {/* {(favSeries === 'Netflix') ? <Netflix /> : <Amazon /> } */}
-    {/* <ul>
+{/* {(favSeries === 'Netflix') ? <Netflix /> : <Amazon /> } */ }
+{/* <ul>
         <li>Sum of two no. is {add(40, 4)}</li>
         <li>Sub of two no. is {sub(30, 3)}</li>
         <li>Div of two no. is {div(10, 3)}</li>
@@ -115,10 +69,10 @@ const App = () => {
     </ul> */}
 
 
-    // </>
-    // );
+// </>
+// );
 
-  // }
+// }
 
 export default App;
 
