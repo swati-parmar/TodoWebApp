@@ -13,6 +13,7 @@ import './index.css';
 // import OnClickChange from "./OnClickChange";
 // import Form from './Form';
 import TodoApp from "./TodoApp";
+import IncreandDecreNum from "./IncreandDecreNum";
 
 
 
@@ -32,7 +33,8 @@ const App = () => {
 
   return (
     <div>
-      <TodoApp/>
+      <IncreandDecreNum />
+      {/* <TodoApp/> */}
       {/* <Form /> */}
     </div>
   );
